@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal Hussen | Software Engineering Portfolio</title>
+    <meta name="description" content="Personal software engineering portfolio of Bilal Hussen, featuring projects in Android/Kotlin, embedded systems/IoT, database design, and software engineering.">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar-container">
+        <div class="container navbar">
+            <a href="#home" class="nav-logo" id="nav-logo-link">
+                <!-- Inline SVG Logo -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>Bilal Hussen</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <!-- Sun Icon (for light mode toggle) -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon (for dark mode toggle) -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Mobile Navigation Menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+                        <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+                        <line x1="3" y1="18" x2="21" y2="18" class="line-bot"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-subtitle">Hi, my name is</span>
+                <h1 class="hero-title"><span class="text-gradient">Bilal Hussen</span></h1>
+                <h2 class="hero-tagline">Software Engineering Graduate | Developer</h2>
+                <p class="hero-desc">
+                    A first-class Software Engineering graduate from De Montfort University. Passionate about Kotlin/Android development, database design, RESTful APIs, IoT, and clean object-oriented systems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" id="hero-view-work-btn">View My Work</a>
+                    <a href="#contact" class="btn" id="hero-contact-btn">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Bilal-H21" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile" id="hero-github-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bilal-hussen-624213243/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile" id="hero-linkedin-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:bilalhussen786@gmail.com" class="social-link" aria-label="Send Email" id="hero-email-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="shape-container">
+                    <div class="shape-blob"></div>
+                    <div class="shape-outline"></div>
+                    <div class="shape-avatar-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <p class="about-text">
+                        I am a final-year BSc (Hons) Software Engineering student at De Montfort University, graduating with a First overall. I possess a strong foundation in programming, object-oriented design, and the full software development lifecycle. My technical experience spans Kotlin/Android development, database design, RESTful API integration, and embedded systems/IoT, complemented by freelance video editing and student ambassador work that strengthened my communication skills.
+                    </p>
+                    <div class="about-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Location</span>
+                            <span class="meta-val">Leicester, UK</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Email</span>
+                            <span class="meta-val"><a href="mailto:bilalhussen786@gmail.com">bilalhussen786@gmail.com</a></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Education</span>
+                            <span class="meta-val">BSc (Hons) Software Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <!-- Languages Category -->
+                <div class="skills-category" id="skills-cat-languages">
+                    <div class="skills-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <h3 class="skills-title">Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Scala</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Front-End Category -->
+                <div class="skills-category" id="skills-cat-frontend">
+                    <div class="skills-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3 class="skills-title">Front-End</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">ReactJS (Exposure)</span>
+                    </div>
+                </div>
+
+                <!-- Databases Category -->
+                <div class="skills-category" id="skills-cat-databases">
+                    <div class="skills-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                        </svg>
+                        <h3 class="skills-title">Databases</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">SQL / MySQL</span>
+                        <span class="skill-tag">Firebase / Firestore</span>
+                        <span class="skill-tag">Database Design</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Practices Category -->
+                <div class="skills-category" id="skills-cat-tools">
+                    <div class="skills-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                        <h3 class="skills-title">Tools & Practices</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">Agile Methodology</span>
+                        <span class="skill-tag">Object-Oriented Design</span>
+                        <span class="skill-tag">Full SDLC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section fade-in">
+        <div class="container">
+            <div class="projects-header">
+                <h2 class="section-title">Projects</h2>
+            </div>
+            
+            <!-- Featured Projects (Featured Cards) -->
+            <div class="featured-projects">
+                <!-- Project Nur -->
+                <div class="project-card featured" id="proj-nur">
+                    <div class="project-content">
+                        <div class="project-header-row">
+                            <span class="project-badge-feat">Featured Project</span>
+                            <div class="project-links">
+                                <a href="https://github.com/Bilal-H21/Project-Nur" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="GitHub Repository for Project Nur" id="proj-nur-github">
+                                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a href="https://github.com/Bilal-H21/Project-Nur" target="_blank" rel="noopener noreferrer">Project Nur</a></h3>
+                        <p class="project-desc">
+                            An Islamic mobile application bridging spiritual and psychological wellbeing, featuring a mood-based "Verse-a-Day" function. Built a robust "Mood Engine" utilizing Kotlin and the MVVM architecture pattern. Integrated RESTful APIs via Retrofit with JSON payload parsing, Kotlin Coroutines for asynchronous processing, and Firebase Authentication + Cloud Firestore for secure user accounts and personalized bookmark data. Developed using Agile methodologies across the full SDLC.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android Studio</span>
+                            <span class="tech-tag">MVVM</span>
+                            <span class="tech-tag">Retrofit</span>
+                            <span class="tech-tag">Firebase / Firestore</span>
+                            <span class="tech-tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Workspace Automation System -->
+                <div class="project-card featured" id="proj-smartworkspace">
+                    <div class="project-content">
+                        <div class="project-header-row">
+                            <span class="project-badge-feat">Featured Project</span>
+                            <div class="project-links">
+                                <a href="https://github.com/Bilal-H21/Smart-Workspace-Automation-System-" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="GitHub Repository for Smart Workspace Automation System" id="proj-smartworkspace-github">
+                                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a href="https://github.com/Bilal-H21/Smart-Workspace-Automation-System-" target="_blank" rel="noopener noreferrer">Smart Workspace Automation System</a></h3>
+                        <p class="project-desc">
+                            An embedded systems/IoT application designed to eliminate electrical energy waste in office spaces. Utilizing an ESP8266 microcontroller, the system interfaces a PIR motion sensor with a relay mechanism to detect desk occupancy and automate power supply shutdown for lamps. Handled circuit hardware assembly, sensor testing, and microcontroller C++ coding, improving power reliability and reducing carbon footprint.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP8266</span>
+                            <span class="tech-tag">PIR Motion Sensor</span>
+                            <span class="tech-tag">Relay Control</span>
+                            <span class="tech-tag">Embedded C/C++</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Projects Section -->
+            <h3 class="other-projects-title">Other Projects</h3>
+            <div class="projects-grid">
+                <!-- Student Course Hub -->
+                <div class="project-card" id="proj-coursehub">
+                    <div class="project-content">
+                        <h4 class="project-title"><a href="https://github.com/Bilal-H21/Student-Course-Hub" target="_blank" rel="noopener noreferrer">Student Course Hub</a></h4>
+                        <p class="project-desc">
+                            A secure, mobile-friendly platform designed for UK universities to market degree programs. Features an intuitive student interface for browsing courses, viewing modules, and registering interest, alongside an admin dashboard for content management and recruitment exports.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Web Platforms</span>
+                            <span class="tech-tag">Admin Dashboard</span>
+                            <span class="tech-tag">Database Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Bilal-H21/Student-Course-Hub" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="proj-coursehub-github">
+                                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Design & Implementation -->
+                <div class="project-card" id="proj-dbdesign">
+                    <div class="project-content">
+                        <h4 class="project-title"><a href="https://github.com/Bilal-H21/Database-Design-Implementation" target="_blank" rel="noopener noreferrer">Database Design & Implementation</a></h4>
+                        <p class="project-desc">
+                            Demonstrates core RDBMS skills including top-down ER modeling, database normalization, and SQL (DDL/DML) implementation. Features secure schemas, data integrity constraints, and GDPR-compliant privacy structures.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RDBMS</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">ER Modelling</span>
+                            <span class="tech-tag">GDPR Privacy</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Bilal-H21/Database-Design-Implementation" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="proj-dbdesign-github">
+                                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OO Design & Development -->
+                <div class="project-card" id="proj-oodesign">
+                    <div class="project-content">
+                        <h4 class="project-title"><a href="https://github.com/Bilal-H21/OO-Design-Development" target="_blank" rel="noopener noreferrer">OO Design & Development</a></h4>
+                        <p class="project-desc">
+                            A collection of modular Java projects showcasing Object-Oriented Design patterns, clean software architecture, core language capabilities, and testing strategies.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">Design Patterns</span>
+                            <span class="tech-tag">Modular Code</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Bilal-H21/OO-Design-Development" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="proj-oodesign-github">
+                                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scala Game -->
+                <div class="project-card" id="proj-scalagame">
+                    <div class="project-content">
+                        <h4 class="project-title"><a href="https://github.com/Bilal-H21/Scala-Game" target="_blank" rel="noopener noreferrer">Scala Game</a></h4>
+                        <p class="project-desc">
+                            A Scala-based game implementing a 10x10 grid with player movement, wall collisions, coordinate tracking, rectangular area-covering logic, and automated pathfinding navigation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Scala</span>
+                            <span class="tech-tag">Grid Manipulation</span>
+                            <span class="tech-tag">Pathfinding</span>
+                            <span class="tech-tag">Functional Context</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Bilal-H21/Scala-Game" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="proj-scalagame-github">
+                                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computer Programming -->
+                <div class="project-card" id="proj-compprogr">
+                    <div class="project-content">
+                        <h4 class="project-title"><a href="https://github.com/Bilal-H21/Computer-Programming" target="_blank" rel="noopener noreferrer">Computer Programming</a></h4>
+                        <p class="project-desc">
+                            Covers programming fundamentals in Scala spanning imperative, object-oriented, and functional paradigms. Showcases state encapsulation, higher-order functions, and unit testing frameworks.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Scala</span>
+                            <span class="tech-tag">Functional Paradigms</span>
+                            <span class="tech-tag">Unit Testing</span>
+                            <span class="tech-tag">Encapsulation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Bilal-H21/Computer-Programming" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="proj-compprogr-github">
+                                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="edu-cert-grid">
+                <!-- Education Timeline -->
+                <div class="edu-timeline-container">
+                    <h3 class="other-projects-title" style="margin-top: 0; margin-bottom: 24px;">Education</h3>
+                    <div class="edu-timeline">
+                        <div class="edu-card" id="edu-dmu">
+                            <span class="edu-date">2023 – 2026</span>
+                            <h4 class="edu-degree">BSc (Hons) Software Engineering</h4>
+                            <p class="edu-school">De Montfort University</p>
+                            <p class="edu-detail">Graduated with a First Class overall grade.</p>
+                            <h5 class="edu-modules-title">Key Academic Modules:</h5>
+                            <ul class="edu-modules">
+                                <li>
+                                    <span class="mod-name">Database Design & Implementation</span>
+                                    <span class="mod-grade">84%</span>
+                                </li>
+                                <li>
+                                    <span class="mod-name">Software Engineering Team Project</span>
+                                    <span class="mod-grade">91%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Grid (Scannable Cards) -->
+                <div class="certifications-container">
+                    <h3 class="other-projects-title" style="margin-top: 0; margin-bottom: 24px;">Certifications</h3>
+                    <div class="cert-grid" id="certifications-list">
+                        <!-- Kotlin Professional Certificate -->
+                        <div class="cert-card" id="cert-kotlin">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-name">Kotlin Professional Certificate</h4>
+                                <div class="cert-meta">
+                                    <span class="cert-provider">JetBrains</span>
+                                    <span>•</span>
+                                    <span>Apr 2026</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Career Essentials in Data Analysis -->
+                        <div class="cert-card" id="cert-data-analysis">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-name">Career Essentials in Data Analysis</h4>
+                                <div class="cert-meta">
+                                    <span class="cert-provider">Microsoft and LinkedIn</span>
+                                    <span>•</span>
+                                    <span>Dec 2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Career Essentials in Project Management -->
+                        <div class="cert-card" id="cert-project-mgmt">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-name">Career Essentials in Project Management</h4>
+                                <div class="cert-meta">
+                                    <span class="cert-provider">Microsoft and LinkedIn</span>
+                                    <span>•</span>
+                                    <span>Dec 2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Engineering Professional Certificate -->
+                        <div class="cert-card" id="cert-data-eng">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-name">Data Engineering Professional Certificate</h4>
+                                <div class="cert-meta">
+                                    <span class="cert-provider">Snowflake</span>
+                                    <span>•</span>
+                                    <span>Nov 2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Microsoft Azure AI Essentials -->
+                        <div class="cert-card hidden" id="cert-azure-ai">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-name">Microsoft Azure AI Essentials Professional Certificate</h4>
+                                <div class="cert-meta">
+                                    <span class="cert-provider">Microsoft and LinkedIn</span>
+                                    <span>•</span>
+                                    <span>Jan 2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Career Essentials in Software Development -->
+                        <div class="cert-card hidden" id="cert-soft-dev">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-name">Career Essentials in Software Development</h4>
+                                <div class="cert-meta">
+                                    <span class="cert-provider">Microsoft and LinkedIn</span>
+                                    <span>•</span>
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Programming Foundations: Beyond the Fundamentals -->
+                        <div class="cert-card hidden" id="cert-prog-beyond">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-name">Programming Foundations: Beyond the Fundamentals</h4>
+                                <div class="cert-meta">
+                                    <span class="cert-provider">LinkedIn Learning</span>
+                                    <span>•</span>
+                                    <span>Dec 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Programming Foundations: Fundamentals -->
+                        <div class="cert-card hidden" id="cert-prog-fund">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 12l10 5 10-5"></path></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-name">Programming Foundations: Fundamentals</h4>
+                                <div class="cert-meta">
+                                    <span class="cert-provider">LinkedIn Learning</span>
+                                    <span>•</span>
+                                    <span>Dec 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Toggle Show More Button -->
+                    <div class="cert-toggle-container">
+                        <button class="btn" id="toggle-certs-btn">Show More Certifications</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </div>
+                <h3 class="contact-title">Let's Connect!</h3>
+                <p class="contact-desc">
+                    I am actively seeking software development roles. Whether you want to discuss a potential opportunity, ask about my projects, or just say hello, feel free to reach out.
+                </p>
+                <div class="contact-methods">
+                    <a href="mailto:bilalhussen786@gmail.com" class="contact-method-card" id="contact-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div class="contact-method-text">
+                            <span class="contact-method-label">Email</span>
+                            <span class="contact-method-value">bilalhussen786@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Bilal-H21" target="_blank" rel="noopener noreferrer" class="contact-method-card" id="contact-github">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <div class="contact-method-text">
+                            <span class="contact-method-label">GitHub</span>
+                            <span class="contact-method-value">Bilal-H21</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bilal-hussen-624213243/" target="_blank" rel="noopener noreferrer" class="contact-method-card" id="contact-linkedin">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <div class="contact-method-text">
+                            <span class="contact-method-label">LinkedIn</span>
+                            <span class="contact-method-value">Bilal Hussen</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scroll-top" aria-label="Scroll back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p class="footer-text">© 2026 Bilal Hussen. All Rights Reserved. Built with HTML, CSS, and JavaScript.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Bilal-H21" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Link" id="footer-github">
+                    <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/bilal-hussen-624213243/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Link" id="footer-linkedin">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
